@@ -3,9 +3,12 @@
 ## Terminal 1 — CAN + bringup
 
 ```bash
-sudo ip link set can1 up type can bitrate 100000
-cd ~/ros2_ws && source install/setup.bash
+sudo ip link set can1 down && sudo ip link set can1 up type can bitrate 1000000
+
+source ~/ros2_ws/install/setup.bash
+
 ros2 launch fabrice_bringup bringup.launch.py
+
 ```
 
 ## Terminal 2 — URDF pour Foxglove
