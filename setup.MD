@@ -1,5 +1,11 @@
 # Lancer Fabrice
 
+```bash
+cd ~/ros2_ws
+  colcon build --packages-select fabrice_bringup
+  source install/setup.bash
+```
+
 ## Terminal 1 — CAN + bringup
 
 ```bash
