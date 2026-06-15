@@ -44,3 +44,20 @@ ros2 topic pub /fabric_drive/cmd_vel geometry_msgs/msg/TwistStamped \
 - L'interface CAN repasse à `DOWN` après un reboot — relancer la commande `ip link set` à chaque démarrage.
 - Les ODrives doivent être alimentés **avant** de lancer le bringup.
 - En cas d'erreur ODrive, vérifier avec `candump can1`.
+
+
+Restart both terminals (full restart needed for the controller YAML):
+
+  kill $(pgrep -f "ros2_control_node|robot_state_publisher|foxglove_bridge|joy_node|teleop_node")
+
+  # Terminal 1
+  source ~/ros2_ws/install/setup.bash
+  ros2 launch fabrice_bringup bringup.launch.py
+
+  # Terminal 2
+  source ~/ros2_ws/install/setup.bash
+  ros2 launch fabrice_bringup teleop.launch.py
+
+  - LB + left stick = up to 2 m/s
+  - LB + RB + left stick = up to 4 m/s
+
