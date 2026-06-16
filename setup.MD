@@ -1,4 +1,11 @@
-# Lancer Fabrice
+
+
+  1. ARM switch ON → 2 bips courts
+  2. ARM switch OFF → 1 bip
+  3. E-stop pressé → alarme continue
+  4. E-stop relâché → 3 bips lents
+  5. ARM switch ON immédiatement → 3 bips rapides (refusé)
+  6. ARM switch OFF puis ON → 2 bips courts (réarmé)# Lancer Fabrice
 
 ```bash
 cd ~/ros2_ws
